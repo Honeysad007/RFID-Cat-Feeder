@@ -1,2 +1,57 @@
-# RFID-Cat-Feeder
-Open-source RFID cat feeder using Elegoo Nano and WL-134 125kHz reader. Designed for multi-cat homes, each feeder opens only for its assigned cat’s RFID tag, making it ideal for pets with special diets. Features quiet servo lid, IR sensor with timed closing, and YouTube video guide.
+## How the Feeders Work (Panther, Tiny & Chubba)
+
+This project is designed for a **multi-cat household** with different dietary needs:
+
+* **Panther** (16 years old) and **Tiny** (14 years old) **share one feeder**.
+  Both wear their own RFID tags, so the lid opens for either of them.
+* **Chubba** has his **own separate feeder**, because he follows a different diet.
+  His feeder only opens for his unique RFID tag.
+
+This setup ensures each cat gets the right food while keeping things fair and stress-free.
+
+---
+
+### Pin Map (both feeders use the same wiring)
+
+* **RFID (WL-134, 125kHz)** → SoftwareSerial RX = D2, TX = D3
+* **IR sensor** → A1 (analog input)
+* **Servo lid** → D9 (PWM control)
+
+---
+
+### Panther & Tiny’s Shared Feeder
+
+* **Authorized tags:** Panther’s tag, Tiny’s tag, plus one extra testing tag.
+* **Logic:**
+
+  1. Feeder is closed until a valid RFID tag is scanned.
+  2. If Panther or Tiny arrives, the feeder opens smoothly.
+  3. The IR sensor keeps the feeder open as long as a cat is detected.
+  4. When the cat leaves, the system waits **4 seconds** before closing.
+  5. Servo closes gently in small steps for quiet operation.
+* **Duplicate scans** are ignored for 3 seconds to prevent rapid reopening.
+* **RFID reader** is disabled during servo motion, then re-enabled after movement, to avoid interference.
+
+---
+
+### Chubba’s Special Feeder
+
+* **Authorized tags:** Only Chubba’s RFID tag.
+* **Logic:**
+
+  1. Feeder stays closed for all tags except Chubba’s.
+  2. When Chubba arrives, the feeder opens and stays open while the IR sensor detects him eating.
+  3. Once he leaves, the feeder waits a short delay, then closes quietly.
+* This feeder ensures Chubba’s special diet is kept separate and protected from the other cats.
+
+---
+
+### What Makes This System Special
+
+* 🐾 **Multi-cat management**: Supports multiple feeders, each assigned to specific cats.
+* 🥣 **Special diet protection**: Chubba’s feeder prevents him from eating Panther & Tiny’s food (and vice versa).
+* 🤫 **Cat-friendly motion**: Servo moves in small steps, making the lid quiet and non-threatening.
+* ⏱️ **Smart timing**: IR sensor ensures feeders only close after cats are done eating.
+* 🛡️ **Noise filtering**: RFID reads are paused during servo moves for stable operation.
+
+
