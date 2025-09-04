@@ -56,4 +56,33 @@ This setup ensures each cat gets the right food while keeping things fair and st
 * ⏱️ **Smart timing**: IR sensor ensures feeders only close after cats are done eating.
 * 🛡️ **Noise filtering**: RFID reads are paused during servo moves for stable operation.
 
+Key Parts Used for the project:
+
+Motion Sensor – $9
+ https://amzn.to/3Zmx9KU
+
+Servo Motor – $15 (per 1)
+ https://amzn.to/44Bu9O6
+
+RFID Tag Reader – $30
+ https://amzn.to/43aZNQ1
+
+Small Acrylic Hinges – $7 (per 12 pack)
+ https://amzn.to/3YJXrXc
+
+Servo Mount Brackets – $10 (per 2)
+ https://amzn.to/3SvQnK3
+
+Servo Arm Horns – $13 (per 4)
+ https://amzn.to/3GSV7qQ
+
+Arduino Nano Board (Presoldered, by ELEGOO) – $15 (set of 3)
+ https://amzn.to/3GSVcLa
+
+Tag holders for collars
+ https://amzn.to/4jQGeTK
+
+RFID Tags (Yellow Round Livestock Style) – $20 (set of 10)
+ https://ebay.us/eq4hpd
+
 
