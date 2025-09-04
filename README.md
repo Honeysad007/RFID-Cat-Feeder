@@ -1,4 +1,6 @@
 ## How the Feeders Work (Panther, Tiny & Chubba)
+🎥 **Full build tutorial on YouTube:**  
+[Watch the video here](https://youtu.be/dFGdMnJU7kA?si=JuvmQTRAC33L4R3a)
 
 This project is designed for a **multi-cat household** with different dietary needs:
 
