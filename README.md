@@ -11,6 +11,11 @@ This project is designed for a **multi-cat household** with different dietary ne
 
 This setup ensures each cat gets the right food while keeping things fair and stress-free.
 
+If this project helps you or you’d like to support my work, you can:
+
+- ☕ [Buy Me a Coffee](https://www.buymeacoffee.com/honeysada)  
+- 💜 [Sponsor on GitHub]( https://github.com/sponsors/Honeysad007)
+
 ---
 
 ### Pin Map (both feeders use the same wiring)
